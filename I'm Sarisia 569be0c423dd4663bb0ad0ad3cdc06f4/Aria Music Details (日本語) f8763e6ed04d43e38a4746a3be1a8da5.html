@@ -1,0 +1,631 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Aria Music Details (日本語)</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, YuMincho, "Yu Mincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", "Songti TC", "Songti SC", "SimSun", "Nanum Myeongjo", NanumMyeongjo, Batang, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+.select-value-color-default { background-color: rgba(206,205,202,0.5); }
+.select-value-color-gray { background-color: rgba(155,154,151, 0.4); }
+.select-value-color-brown { background-color: rgba(140,46,0,0.2); }
+.select-value-color-orange { background-color: rgba(245,93,0,0.2); }
+.select-value-color-yellow { background-color: rgba(233,168,0,0.2); }
+.select-value-color-green { background-color: rgba(0,135,107,0.2); }
+.select-value-color-blue { background-color: rgba(0,120,223,0.2); }
+.select-value-color-purple { background-color: rgba(103,36,222,0.2); }
+.select-value-color-pink { background-color: rgba(221,0,129,0.2); }
+.select-value-color-red { background-color: rgba(255,0,26,0.2); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="f8763e6e-d04d-43e3-8a47-46a3be1a8da5" class="page sans"><header><h1 class="page-title">Aria Music Details (日本語)</h1></header><div class="page-body"><p id="3b1a3d0f-26aa-4b87-a189-0d33335ed875" class="">Also available at: <a href="https://sarisia.cc/aria-music">https://sarisia.cc/aria-music</a></p><p id="61c413f5-752c-4e09-a576-abe7a0447ef8" class="">
+</p><p id="6344811a-8e50-4685-bd19-e6c717dc3136" class="">Aria Music は、1つのセッションを複数人で共有できる音楽プレイヤーです。</p><figure id="78212e97-38e4-4a44-aebf-8ca8e2511f43"><a href="https://github.com/aria-music" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Aria Music</div><div class="bookmark-description">Dismiss GitHub is home to over 50 million developers working together. Join them to grow your own development teams, manage permissions, and collaborate on projects. Sign up Pinned repositories Aria Music Core Server Python 1 Aria Music Web Client Vue 2 Aria Discord Client written in Golang Go Most used topics Loading...</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/aria-music</div></div><img src="https://avatars1.githubusercontent.com/u/53227826?s=280&amp;v=4" class="bookmark-image"/></a></figure><h1 id="4b221ca4-9f63-4541-9457-78aab7c178fa" class="">デモ</h1><figure id="67ecda48-74b0-4acd-90de-9ac19cb5542a"><div class="source"><a href="https://www.youtube.com/watch?v=BdDe02ajDGw">https://www.youtube.com/watch?v=BdDe02ajDGw</a></div></figure><p id="1bbf57da-46c6-48d8-b129-7c176963a8a1" class="">
+</p><nav id="c43acf05-25e4-48bd-95de-5285d8deb7f0" class="block-color-orange table_of_contents"><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#4b221ca4-9f63-4541-9457-78aab7c178fa">デモ</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#989df612-1438-4f75-9f0c-bb49fe5f915b">モチベーション</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#a80f430b-9a25-4c41-9eac-de0efa251f44">特徴</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#9e488053-93ef-4bdd-b062-4f562bc477d1">機能</a></div><div class="table_of_contents-item table_of_contents-indent-0"><a class="table_of_contents-link" href="#f8ace92b-85ff-4932-aee4-3ff04941fe2e">技術</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#df449ebd-206e-4e25-8086-4858960b9557">全体構成図</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#446e1eff-abdf-4663-b9c3-41118eab1f41">サーバ</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#1de76f6d-3e8d-455f-9a53-4e372acba43e">コアサーバ</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#53ebc397-83e2-4f07-8911-681550af8eca">データベースサーバ</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#779fa710-c2c9-4a18-85fa-9148c52b80ff">クライアント</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#67a5628d-cc95-4ad5-b656-dda05bf24f45">Web クライアント</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#843274ac-1bea-472c-af04-7fa6f56ff96d">Discord クライアント</a></div><div class="table_of_contents-item table_of_contents-indent-2"><a class="table_of_contents-link" href="#14d2c7d3-9c16-48e3-8263-debf82e9033c">Amazon Alexa クライアント</a></div><div class="table_of_contents-item table_of_contents-indent-1"><a class="table_of_contents-link" href="#cc9a5b4d-8a99-430e-8653-85f1b9db6983">Visual Studio Code クライアント</a></div></nav><h1 id="989df612-1438-4f75-9f0c-bb49fe5f915b" class="">モチベーション</h1><ul id="cf232cc7-59af-433f-974e-872b9e650c33" class="bulleted-list"><li>友人宅で遊んでいる際や, 通話をしている際に音楽を流したいが, 便利な方法がなかった<ul id="73fd6a54-663b-4f2b-89de-ddcc18a33701" class="bulleted-list"><li>音楽プレイヤーが特定の端末で動作しているため、操作できるのは誰か1人であり、不便</li></ul><ul id="b9cd882f-53e1-4aaa-8cd1-ca0df40493a8" class="bulleted-list"><li>操作するために端末を手元に持ってくる、または端末の前まで移動する必要がある</li></ul><ul id="dd2e8bd6-aed5-41e2-bd82-5c00696eefda" class="bulleted-list"><li>曲をリクエストする際の伝達方法が限られる (URLを外部サービスで共有する等)</li></ul></li></ul><ul id="64f92883-9e86-4d36-aff2-b15cf1bee39c" class="bulleted-list"><li>Discord (チャット / 通話サービス) でボイスチャットをする際、複数人で音楽を聴くことができる MusicBot を利用していた<figure id="bd410fd1-630c-47b3-8bad-ed7d21cc68be"><a href="https://github.com/Just-Some-Bots/MusicBot" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Just-Some-Bots/MusicBot</div><div class="bookmark-description">MusicBot is the original Discord music bot written for Python 3.5+, using the discord.py library. It plays requested songs from YouTube and other services into a Discord server (or multiple servers). Besides, if the queue becomes empty MusicBot will play through a list of existing songs with configuration.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/Just-Some-Bots/MusicBot</div></div><img src="https://camo.githubusercontent.com/9db3951a906d96ce10f2361f6041a076f80dfc0a/68747470733a2f2f692e696d6775722e636f6d2f465763487463532e706e67" class="bookmark-image"/></a></figure><ul id="235f518b-ae25-4d5a-93b5-e76b4c334beb" class="bulleted-list"><li>Discord 上からのコマンドでしか操作できない</li></ul><ul id="b9db7d53-0906-44de-8bff-ceb2dcb51fb6" class="bulleted-list"><li>バグでよく再生が止まってしまう</li></ul><ul id="b756b67e-6425-46c4-9d72-e58f2e27d6e3" class="bulleted-list"><li>プレイリスト機能がない</li></ul><ul id="34e44f70-b681-4cb6-ab76-a1b7c026b0ee" class="bulleted-list"><li>機能追加やバグ修正のプルリクエスト等を送りメンテナンスしていたが、自身の要求を満たせないと判断した</li></ul></li></ul><p id="f354ef45-a421-43f0-bb5d-1ec22db7d0aa" class="">以上の課題を解決するために、Aria Music を開発しました。</p><h1 id="a80f430b-9a25-4c41-9eac-de0efa251f44" class="">特徴</h1><ul id="10e86fcc-4013-4fd4-9952-96ffe307ac42" class="bulleted-list"><li>複数人で1つのセッションを共有<ul id="f78258a7-a994-4a89-9d2a-6a329068ef06" class="bulleted-list"><li>接続中のユーザー全員で音楽の再生位置が同期</li></ul><ul id="5183f43e-b95b-4786-bd29-790d6b1cb755" class="bulleted-list"><li>再生キュー・プレイヤーの再生 / 一時停止状態などもすべてリアルタイムに同期</li></ul><ul id="4a8beb29-e885-451e-8c8e-bfc47753c524" class="bulleted-list"><li>複数人が同時に操作しても壊れない</li></ul></li></ul><ul id="cc94d5cc-e563-4ffe-a591-50a19f2189cb" class="bulleted-list"><li>多彩なクライアント<ul id="3199dc48-211b-4c3f-ad19-b9fd22857186" class="bulleted-list"><li>環境を選ばず利用できる多彩なクライアント<ul id="4719a482-f0dc-48a4-bf0e-49125ecce17a" class="bulleted-list"><li>Webクライアント</li></ul><ul id="cf43758f-707a-47f0-a683-b336393e6ad1" class="bulleted-list"><li>Discord (チャット / 通話サービス)</li></ul><ul id="58f0dcc9-13ce-45ad-80df-92ce9dbda7c6" class="bulleted-list"><li>Amazon Alexa (音声コントロールのみ)</li></ul><ul id="376a5cd6-2ec4-40e2-99c0-68b1fe138592" class="bulleted-list"><li>Visual Studio Code</li></ul><ul id="d2fea778-b309-4ec6-bd21-037a103be7c2" class="bulleted-list"><li>iOS Shortcuts (共有ウィジェットから再生キューへの追加)</li></ul></li></ul><ul id="b3c43b1e-a568-40d8-904d-63a160f216a7" class="bulleted-list"><li>REST API / WebSocket API を提供、自由なクライアントの開発が可能<ul id="acb0fd63-ea8b-436c-88fd-40796d9cc696" class="bulleted-list"><li>WebSocket API ならサーバからのイベントを扱える</li></ul><ul id="f5566261-f2f7-4e6a-818f-1e394f218413" class="bulleted-list"><li>REST API でも  WebSocket API と同様の操作が可能<ul id="ea1c86d0-1446-4c21-991a-f40174e4afce" class="bulleted-list"><li>クライアントの目的に応じて選択が可能</li></ul></li></ul></li></ul></li></ul><ul id="a8b3f9f0-0e31-468f-9481-a041ebe13f92" class="bulleted-list"><li>高パフォーマンス<ul id="99c08c1a-f3ce-4c25-9ca6-ccb4a538dc66" class="bulleted-list"><li>約150超のクライアントが同時に接続してもイベント・音声の配信に遅延なし</li></ul></li></ul><h1 id="9e488053-93ef-4bdd-b062-4f562bc477d1" class="">機能</h1><ul id="9ffa1b2a-e240-4cd8-82ff-9fb8aef0526a" class="bulleted-list"><li>音楽プレイヤー<ul id="0c9e36d2-32f6-4e5e-906f-64d19f67cd2b" class="bulleted-list"><li>再生、一時停止、スキップ、音量調整が可能</li></ul><ul id="88254a48-1748-4f74-a8c3-7f851d0fcd6a" class="bulleted-list"><li>耳を壊さないための音量ノーマライズ</li></ul></li></ul><ul id="9f54ba9e-fa54-4421-91b3-51ca2c0f6f75" class="bulleted-list"><li>再生キュー<ul id="d188738b-8dc9-4995-9332-972f776731e4" class="bulleted-list"><li>再生キューに曲を追加するとキュー順に再生される</li></ul><ul id="3a59f293-c8c2-4766-851d-93d1296335d3" class="bulleted-list"><li>YouTube、Niconico や SouncCloud 等、外部メディアの URL やプレイリストからキューへの追加が可能</li></ul><ul id="33430a6d-12a5-470f-8c3a-353f188e7df0" class="bulleted-list"><li>キューのシャッフル、リピート、並び替えが可能</li></ul></li></ul><ul id="ef007fd0-c0b5-4a27-8e09-18f31eb652fd" class="bulleted-list"><li>プレイリスト<ul id="a97bd377-573e-4a68-9798-0aa1b520c050" class="bulleted-list"><li>プレイリストの作成 / 削除</li></ul><ul id="2bf87f08-354b-488d-8dbf-3700df42c51d" class="bulleted-list"><li>プレイリストへの曲の追加</li></ul><ul id="90641520-8f92-4fcd-8e59-f9f3e45d8075" class="bulleted-list"><li>プレイリストから再生キューへのキューイング</li></ul><ul id="cfc766e2-0785-4d5e-a0b9-c9898f4f3df9" class="bulleted-list"><li>プレイリスト全体を再生キューへキューイング</li></ul><ul id="637f56a9-7f0a-44b1-8e36-1a569e580001" class="bulleted-list"><li>複数のサービスに散在するメディアを同一プレイリスト内で管理可能</li></ul></li></ul><ul id="2171c92b-a510-4204-a208-af428ee8bcba" class="bulleted-list"><li>Like<ul id="b85775bc-2a0b-4171-ab94-d31871b7c326" class="bulleted-list"><li>曲を Like することが可能</li></ul><ul id="32d8e94d-bfc6-4fe1-b82a-c34e8160a441" class="bulleted-list"><li>再生キューが空の時に Likes からランダムに選曲し再生<ul id="534d8021-d126-4cce-99c2-582c1532bd3c" class="bulleted-list"><li>好みの曲を流せるラジオステーションのような使い方が可能</li></ul></li></ul></li></ul><ul id="748cd575-803c-4782-ab91-8f912b308945" class="bulleted-list"><li>API<ul id="2235c408-e311-4f20-9a84-31844a228523" class="bulleted-list"><li>WebSocket API を提供<ul id="27da1005-3432-4183-a4af-23c42f24c978" class="bulleted-list"><li>クライアントでサーバからのイベントに応じた処理が可能</li></ul><p id="74e808df-ed8e-484d-bf02-c8e3465da06a" class="">
+</p></li></ul></li></ul><h1 id="f8ace92b-85ff-4932-aee4-3ff04941fe2e" class="">技術</h1><p id="901ff8db-7644-4100-ba4e-1a48b0e8dbcd" class="">サーバ、クライアントで構成されています</p><h2 id="df449ebd-206e-4e25-8086-4858960b9557" class="">全体構成図</h2><figure id="999d8547-f323-4037-a39c-7456e4b175f5" class="image"><a href="Aria%20Music%20Details%20(%E6%97%A5%E6%9C%AC%E8%AA%9E)%20f8763e6ed04d43e38a4746a3be1a8da5/aria.png"><img style="width:2804px" src="Aria%20Music%20Details%20(%E6%97%A5%E6%9C%AC%E8%AA%9E)%20f8763e6ed04d43e38a4746a3be1a8da5/aria.png"/></a></figure><h2 id="446e1eff-abdf-4663-b9c3-41118eab1f41" class="">サーバ</h2><p id="10501620-a4b8-4a17-bc68-ded99df69587" class="">サーバはコアサーバ、データベースサーバで構成されています</p><h3 id="1de76f6d-3e8d-455f-9a53-4e372acba43e" class="">コアサーバ</h3><p id="3c791cf6-a287-4eb7-a744-73a58564b621" class="">プレイヤー本体。API を提供する。</p><figure id="75aee1e5-ee31-4ef2-b5f9-d6e01c8f2da5"><a href="https://github.com/aria-music/aria-core" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">aria-music/aria-core</div><div class="bookmark-description">Aria Music Core Server. Contribute to aria-music/aria-core development by creating an account on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/aria-music/aria-core</div></div><img src="https://user-images.githubusercontent.com/33576079/79771194-6a830e80-8369-11ea-995f-cd5ac25d12e3.PNG" class="bookmark-image"/></a></figure><ul id="0c7f51c5-cf46-48e4-af27-433b457fec10" class="bulleted-list"><li>コミッター<ul id="429cb27e-818b-45dd-8e82-53ffb1216f0f" class="bulleted-list"><li><a href="https://github.com/sarisia">@sarisia</a></li></ul></li></ul><ul id="d2489aef-4c04-42b7-a3fc-b9236d27b638" class="bulleted-list"><li>使用技術<ul id="2c28e067-7c71-48cd-b274-381d5624a0ff" class="bulleted-list"><li><code>Python3</code><ul id="a11bab52-e428-452b-a466-5344a7334334" class="bulleted-list"><li><code>asyncio</code>, <code>aiohttp</code> による非同期プログラミング</li></ul><ul id="0fc10614-b964-46e7-8cf1-6ed7a21649c8" class="bulleted-list"><li>API コントローラ</li></ul></li></ul><ul id="da3f50a2-d1cf-426a-874f-05a337164f5e" class="bulleted-list"><li><code>redis</code><ul id="5c180209-3bfa-41c3-89d0-ae927784c9b3" class="bulleted-list"><li>招待機能、CSRFトークンの管理</li></ul></li></ul><ul id="f6a899b1-e7c9-47db-b835-856833fecd72" class="bulleted-list"><li><code>sqlite3</code>, ORM (<code>tortoise-orm</code>)<ul id="1539fea4-e47d-4164-a7f3-9e9852e27e55" class="bulleted-list"><li>アクセストークン、登録ユーザの管理</li></ul></li></ul><ul id="b8159f97-1aa2-4871-acfa-40218e7e845c" class="bulleted-list"><li><code>WebSocket</code><ul id="b2cd3d7e-0b29-41f7-8fed-ca460ecac242" class="bulleted-list"><li>クライアントとの通信</li></ul><ul id="ac510fff-c940-4bcf-9200-c24b70555b54" class="bulleted-list"><li>音声パケットのブロードキャスト</li></ul></li></ul><ul id="a045940a-97d9-4e02-b399-909c76d21737" class="bulleted-list"><li><code>ffmpeg</code>, Opus Codec (<code>libopus</code>), C FFI (<code>ctypes</code>)<ul id="03fd38db-5cf5-47f3-86f7-ddc6fd18d5e1" class="bulleted-list"><li><code>ffmpeg</code> で音声ファイルを PCM バイナリとして取得</li></ul><ul id="5c581324-1b3f-445f-8541-5a6d466ba473" class="bulleted-list"><li><code>libopus</code> で音声パケットのエンコード (圧縮)<ul id="04c71c45-d662-4214-bd6e-6d475d121a89" class="bulleted-list"><li><code>ctypes</code> FFI で <code>libopus</code> をラップして利用</li></ul></li></ul></li></ul></li></ul><ul id="1b06f110-33fb-4780-b93b-4b8ac874e4ab" class="bulleted-list"><li>課題<ul id="4beedbd0-daa6-4729-9505-81b244a40f57" class="bulleted-list"><li>プレイヤーが重い処理を行うと稀に音声パケットがドロップする<ul id="2b7e659b-c4db-4095-9f6d-fb96b8e7ebbf" class="bulleted-list"><li>Pythonランタイムが (実質) シングルスレッドで動作するのが原因</li></ul><ul id="33b97659-6fae-4b1a-8741-4e084f51b069" class="bulleted-list"><li>音声の再生、ブロードキャストを別アプリケーションに切り出す予定<ul id="077bee8f-6781-4b42-9192-985e8b5d02d0" class="bulleted-list"><li><code>Elixir</code> &amp; <code>Phoenix Framework</code> を検討</li></ul></li></ul></li></ul></li></ul><h3 id="53ebc397-83e2-4f07-8911-681550af8eca" class="">データベースサーバ</h3><p id="636cf29a-9141-487d-8635-9604c1cb1094" class="">Like、プレイリスト、楽曲メタデータキャッシュ</p><figure id="4e72dc19-48a3-4849-9090-e620fdea80cf"><a href="https://github.com/aria-music/aria-database.git" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">aria-music/aria-database</div><div class="bookmark-description">Manage cache, playlist, gpm database. Contribute to aria-music/aria-database development by creating an account on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/aria-music/aria-database.git</div></div><img src="https://avatars2.githubusercontent.com/u/53227826?s=400&amp;v=4" class="bookmark-image"/></a></figure><ul id="cb35dd80-2363-428c-905f-56cc27fe9765" class="bulleted-list"><li>コミッター<ul id="3903e9bd-96cc-482a-a6e2-123f6a6238f5" class="bulleted-list"><li><a href="https://github.com/sarisia">@sarisia</a></li></ul></li></ul><ul id="f9c72389-2119-4ef2-aa99-a01a51f75a34" class="bulleted-list"><li>使用技術<ul id="8a366f33-1bcb-4a11-a9d0-64e1ccaddc26" class="bulleted-list"><li><code>Java</code></li></ul><ul id="2e773e91-29a2-48c7-bd6a-7dc056337d83" class="bulleted-list"><li><code>Kotlin</code></li></ul><ul id="f639dbe3-9ac4-4e23-8d44-d84f46cb422f" class="bulleted-list"><li><code>Spring Framework</code><ul id="6f8b3541-6cd3-42ac-a8cf-c7187ae74e74" class="bulleted-list"><li><code>Spring MVC</code></li></ul></li></ul><ul id="3802036d-dace-47c1-a868-01a4f6347d6a" class="bulleted-list"><li><code>PostgreSQL</code><ul id="e6e6872a-1878-4827-a33c-6935d4d48035" class="bulleted-list"><li><code>Spring JDBC</code></li></ul></li></ul></li></ul><ul id="d80828e3-e3ac-492d-aed7-7fdfc9e827b4" class="bulleted-list"><li>課題<ul id="24c20e81-bb35-4180-bc78-20dec5731236" class="bulleted-list"><li>リクエストに対して返すデータが大きすぎる<ul id="877e781c-cffe-4718-830d-7421de83fd9a" class="bulleted-list"><li>不必要なデータをレスポンスに含む場合がある</li></ul><ul id="a566d462-92e3-4c7a-9876-e11d897df8cb" class="bulleted-list"><li>制御する方法を提供する</li></ul><ul id="1e5896eb-48f4-4b41-82ad-8d5d230b4478" class="bulleted-list"><li>GraphQL を検討</li></ul></li></ul></li></ul><h2 id="779fa710-c2c9-4a18-85fa-9148c52b80ff" class="">クライアント</h2><h3 id="67a5628d-cc95-4ad5-b656-dda05bf24f45" class="">Web クライアント</h3><figure id="c2435ede-49a6-4d0e-87f9-1badf8e9dc98"><a href="https://github.com/aria-music/aria-web" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">aria-music/aria-web</div><div class="bookmark-description">Aria Music Web Client. Contribute to aria-music/aria-web development by creating an account on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/aria-music/aria-web</div></div><img src="https://avatars2.githubusercontent.com/u/53227826?s=400&amp;v=4" class="bookmark-image"/></a></figure><ul id="7d928a61-5837-41a8-919a-1c79a9cfc69f" class="bulleted-list"><li>コミッター<ul id="786801e5-59df-41cf-95df-a5e9c2037fa5" class="bulleted-list"><li><a href="https://github.com/mnsinri">@mnsinri</a> - メイン開発者</li></ul><ul id="3d87cc10-f3f4-4af6-8090-be1814800a9f" class="bulleted-list"><li><a href="https://github.com/sarisia">@sarisia</a> - 音声再生機能</li></ul></li></ul><ul id="dd672cc6-5695-4afe-bd63-c040c7e24042" class="bulleted-list"><li>使用技術<ul id="4c2fd0d7-b89a-4b50-bd5a-c84c55579036" class="bulleted-list"><li><code>Vuejs</code></li></ul><ul id="b3dc149d-a53e-492c-8fba-65d21129b795" class="bulleted-list"><li><code>Vuex</code></li></ul><ul id="17e06ef4-89ed-4237-b3cb-ed3e1856be5c" class="bulleted-list"><li><code>WebSocket</code><ul id="bb8198d9-d0b7-4de3-86be-e8a32521bf93" class="bulleted-list"><li>プレイヤー制御、イベント受信</li></ul><ul id="78a80349-d9f6-4198-b32d-b17a8c0d548a" class="bulleted-list"><li>音声パケット受信</li></ul></li></ul><ul id="7fa4dd4a-8445-4e76-be4b-fc5baf9c4d21" class="bulleted-list"><li><code>WebAudio</code>, <code>WebWorker</code>, <code>WebAssembly</code>, Opus Codec (<code>libopus</code>)<ul id="749dda88-3b6d-432d-b0da-d6bfc3797aa4" class="bulleted-list"><li><code>libopus</code> を <code>Emscripten</code> で <code>WebAssembly</code> にコンパイル</li></ul><ul id="ebeb9b54-3fde-414b-956c-6bb652d9cf0c" class="bulleted-list"><li>サーバから受信した <code>opus</code> エンコードされた音声パケットを <code>WebWorker</code> 上でデコード</li></ul><ul id="faf10196-b2a6-4c76-97e3-338710fff205" class="bulleted-list"><li>デコードされたPCMオーディオを <code>WebAudio</code> で再生</li></ul></li></ul><ul id="84e38dc2-9579-4c24-9c96-c172e607d391" class="bulleted-list"><li><del>Netlify</del> → GitHub Pages &amp; CloudFront<ul id="863ebadc-b192-4ae4-9af8-4caa243836df" class="bulleted-list"><li>GitHub Pages では SPA のルーティングを適切に扱えないため CloudFront を併用</li></ul><ul id="05c75fc5-2740-4eb7-be19-000ea3722559" class="bulleted-list"><li>将来的に S3 &amp; CloudFrontを検討中</li></ul></li></ul></li></ul><ul id="0899487f-2052-4080-80fd-4c1801d1aaee" class="bulleted-list"><li>課題<ul id="74c06f5e-bb64-4dee-84c7-46722d64d694" class="bulleted-list"><li>重い処理を行うと音声がドロップする<ul id="074bf3de-9298-4e1e-bba2-76014ff9000c" class="bulleted-list"><li><code>WebAudio</code> の <code>AudioContext</code> にはメインスレッドからしかアクセスできない (<code>WebWorker</code>) 上からアクセスできないため、メインスレッド上の他の処理に時間がかかるとワーカーからのイベントを処理できないために音声パケットのキューイングができず、音声が止まる</li></ul></li></ul><ul id="879f4025-e70b-4816-8a60-46d3d1c5ff2c" class="bulleted-list"><li><code>MediaSession</code> API 対応を実装しても <code>&lt;audio&gt;</code> 要素がないと表示されない (<code>AudioContext</code> が再生中でも UI が出てこない)<ul id="10db147d-e54f-4ad4-a8af-88fa9300df5a" class="bulleted-list"><li><code>Chromium</code> のバグらしい？crbug に上がっていた</li></ul></li></ul></li></ul><h3 id="843274ac-1bea-472c-af04-7fa6f56ff96d" class="">Discord クライアント</h3><figure id="7605bd06-13b5-4fd0-8736-60e3aa48c789"><a href="https://github.com/aria-music/aria-discord-go" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">aria-music/aria-discord-go</div><div class="bookmark-description">Aria Discord Client written in Golang. Contribute to aria-music/aria-discord-go development by creating an account on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/aria-music/aria-discord-go</div></div><img src="https://avatars2.githubusercontent.com/u/53227826?s=400&amp;v=4" class="bookmark-image"/></a></figure><ul id="5f25db59-9398-40bf-80c9-df3bd4aff592" class="bulleted-list"><li>コミッター<ul id="176f33b0-e6d5-462f-a648-a832a967ac84" class="bulleted-list"><li><a href="https://github.com/sarisia">@sarisia</a></li></ul></li></ul><ul id="6f978090-edb9-47a5-900b-252744278162" class="bulleted-list"><li>使用技術<ul id="4d400582-3bb5-46d3-8285-4fa05f060afb" class="bulleted-list"><li><code>Golang</code></li></ul><ul id="643703bb-7d34-4e74-9133-07e7fdb38579" class="bulleted-list"><li><code>WebSocket</code></li></ul></li></ul><h3 id="14d2c7d3-9c16-48e3-8263-debf82e9033c" class="">Amazon Alexa クライアント</h3><figure id="66cb9602-8412-4867-8320-8900816299ad"><a href="https://github.com/aria-music/aria-alexa" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">aria-music/aria-alexa</div><div class="bookmark-description">You can&#x27;t perform that action at this time. You signed in with another tab or window. You signed out in another tab or window. Reload to refresh your session. Reload to refresh your session.</div></div><div class="bookmark-href"><img src="https://github.com/favicon.ico" class="icon bookmark-icon"/>https://github.com/aria-music/aria-alexa</div></div><img src="https://avatars2.githubusercontent.com/u/53227826?s=400&amp;v=4" class="bookmark-image"/></a></figure><ul id="4a91282a-cfbb-475b-a082-747ee1d1f511" class="bulleted-list"><li>コミッター<ul id="26936458-0f38-4e35-946a-df438ef81f59" class="bulleted-list"><li>@sarisia</li></ul></li></ul><ul id="0c4209b6-523e-45ed-a010-45d3b7c6a110" class="bulleted-list"><li>使用技術<ul id="e1b01adb-609f-4254-bccc-6d3a011e7676" class="bulleted-list"><li>Golang</li></ul><ul id="c1210701-958f-440b-898d-5282ba67122d" class="bulleted-list"><li>AWS Lambda</li></ul></li></ul><h2 id="cc9a5b4d-8a99-430e-8653-85f1b9db6983" class="">Visual Studio Code クライアント</h2><figure id="29f5f379-4dcb-4241-8c97-1622c0a1f41c"><a href="https://github.com/aria-music/aria-vscode" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://github.com/aria-music/aria-vscode</div></div></a></figure><ul id="1dfc1dd9-d60e-41c1-9a3d-5071ee57a9d5" class="bulleted-list"><li>コミッター<ul id="d1456446-2664-4462-8b7c-531a382f78b0" class="bulleted-list"><li><a href="https://github.com/sarisia">@sarisia</a></li></ul></li></ul><ul id="54e6576c-abc5-4fb8-930b-4f590d2245a1" class="bulleted-list"><li>使用技術<ul id="025cd624-084e-43c3-a0c8-7b35d07e44d0" class="bulleted-list"><li>TypeScript</li></ul></li></ul><p id="9db2dc65-22b1-4b6b-b1de-d2b3b5b5fb11" class="">
+</p></div></article></body></html>
